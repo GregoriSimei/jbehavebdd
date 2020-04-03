@@ -1,7 +1,12 @@
+Scenario:
+    As a user,
+    I want to be able remove some dishes,
+    in which case,
+    a new coefficient is calculated using the left dishes.
 
-Scenario: As a user, I want to be able remove some dishes, in which case, a new coefficient is calculated using the left dishes.
-
-Given I used as array '[1,2,3]' of dishes
-And I am still pending step
-When a good soul will implement me
-Then I shall be happy
+Given I used an array '<list>' of dishes
+When I remove the dishes '<listRemoved>'
+Then the output must be '<result>'
+Examples:
+| list               | listRemoved | result |
+| [-1, -9, 0, 5, -7] | [-9, -7]    | 14     |
